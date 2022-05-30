@@ -26,8 +26,8 @@ function hover() {
     document.addEventListener('mouseover', (e) => {
         // Get the id of the current div the cursor is hovering over.
         ci = e.target.id;
-        // Make sure not to affect the container div.
-        if (ci !== 'container'){
+        // Make sure not to affect the container div and reset button.
+        if (ci !== 'container' && ci !== 'resetbtn'){
             // Store the element from the id of the div the cursor is currently over.
             currentDiv = document.getElementById(ci);
             // Add the class .live to the current element(div).
@@ -41,4 +41,16 @@ function hover() {
     })**/
 
 }
+
+function clear() {
+    const divs = document.querySelectorAll('.grid');
+    divs.forEach(div => {
+        div.remove();
+    })
+    gridForm();
+}
+
+const reset = document.getElementById('resetbtn');
+reset.addEventListener('click',clear)
+
 hover();
