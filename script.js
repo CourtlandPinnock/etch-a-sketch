@@ -4,10 +4,10 @@ function gridForm() {
     const container = document.getElementById('container')
     // To populate a 16x16 grid we need 256 elements. So iterate from 0 to 256.
     for (i = 0; i < 256; i++){
-        // Each time we create a div. 100px x 100px.
+        // Each time we create a div. 60px x 60px.
        const div = document.createElement('div');
-       div.style.width = '100px';
-       div.style.height = '100px';
+       div.style.width = '60px';
+       div.style.height = '60px';
        // Add class 'grid' to each div we create
        divList = div.classList;
        divList.add('grid')
@@ -35,10 +35,10 @@ function hover() {
         }
     })
     // Listen for the cursor leaving the highlighted div.
-    document.addEventListener('mouseout', (e) => {
+    /*document.addEventListener('mouseout', (e) => {
         // Remove the .live class to un-highlight the div.
         currentDiv.classList.remove('live');
-    })
+    })**/
 
 }
 hover();
