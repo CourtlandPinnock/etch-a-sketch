@@ -2,10 +2,10 @@ body {
     display: flex;
 }
 #container {
+    border:solid black;
     display: flex;
-    flex:0 0 1700px;
+    flex:0 0 960px;
     flex-wrap: wrap;
-    width:1700px;
     vertical-align: top; 
             
 }
@@ -13,8 +13,12 @@ body {
 .grid {
     padding:0px;
     margin:0px;
-    border:solid black 1px;
+    border:0px;
     display: inline-block;
     width:100px;
     height:100px;
+}
+
+.live {
+    background-color: black;
 }
