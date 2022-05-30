@@ -1,0 +1,20 @@
+body {
+    display: flex;
+}
+#container {
+    display: flex;
+    flex:0 0 1700px;
+    flex-wrap: wrap;
+    width:1700px;
+    vertical-align: top; 
+            
+}
+
+.grid {
+    padding:0px;
+    margin:0px;
+    border:solid black 1px;
+    display: inline-block;
+    width:100px;
+    height:100px;
+}
