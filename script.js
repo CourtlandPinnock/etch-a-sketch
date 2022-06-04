@@ -2,19 +2,45 @@
 function gridForm() {
     // Store the container element in the variable container.
     const container = document.getElementById('container')
+    //container.style.height = 960;
     // To populate a 16x16 grid we need 256 elements. So iterate from 0 to 256.
-    for (i = 0; i < 256; i++){
-        // Each time we create a div. 60px x 60px.
+    const wh = prompt('Enter number of squares.', 'Number will be squared.');
+    total = wh * wh;
+    // User sets number of squares squared.
+    // If the user enters 64. It will create 64 x 64 grid. 4096 squares
+    // We want the size of the squares to scale, beacuse the canvas is always the same size no matter how many squares.
+    // 960 * 960 = 921,600px. squareArea(225) = 921,600px / total(4096)
+    // divWidth && divHeight = squareroot(squareArea)
+
+    const totalArea = 960 * 960;
+    const squareArea = totalArea / total;
+    divWidth = Math.sqrt(squareArea);
+    divHeight = Math.sqrt(squareArea);
+    console.log('total:',total);
+    console.log('divHeight:',divHeight);
+    console.log('divWidth:',divWidth);
+    console.log('squareArea:',squareArea);
+    
+
+
+    for (i = 0; i < total; i++){
+        // Each time we create a div. divHeight * divWidth;
        const div = document.createElement('div');
-       div.style.width = '60px';
-       div.style.height = '60px';
+       //let divSize = document.getElementById(i);
+      
+
        // Add class 'grid' to each div we create
        divList = div.classList;
        divList.add('grid')
+       div.style.height = divHeight + 'px';
+       div.style.width = divWidth + 'px';
+       
        // Add an id to each div of their position in the grid. i + 1 so first div is 1 and not 0, where our loop starts form.
        div.id = (i + 1);
+       //console.log('id',div)
        // Add the div to the dom.
        container.appendChild(div);
+       
     }
 }
 
