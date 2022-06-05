@@ -1,7 +1,23 @@
 body {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items:center;
+    
+}
+.all{
+    display: flex;
     align-items: center;
+}
+.controls-vert{
+    gap: 40px;
+    display: flex;
+    margin-left: 60px;
+    margin-right: 30px;
+    width:300px;
+    height:300px;
+    border:solid black;
+
 }
 .reset {
     margin:25px 0px 30px 0px;
@@ -10,14 +26,18 @@ body {
     height:auto;
 }
 .wrapper {
+    justify-content: center;
+    align-items: center;
     display:flex;
     width:960px;
+    height:960px;
 }
 #container {
     border:solid black;
     display: flex;
     flex-direction: row;
     flex:0 0 960px;
+    height: 960px;
     flex-wrap: wrap;
  
             
@@ -27,8 +47,6 @@ body {
     padding:0px;
     margin:0px;
     border:0px;
-    width:60px;
-    height:60px;
 }
 
 .live {
