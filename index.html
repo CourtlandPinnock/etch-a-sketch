@@ -6,23 +6,52 @@
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-        <div class="controls">
-            <button id="resetbtn" class="reset">Reset</button>
-        </div>
-        <div class="all">
         
+        <div class="all">
+            <div class="left">
+                <div class="slider-container" id="topSlider">
+                    <input type="range" min="1" max="100" class="slider" id="gridSize">
+                </div>
+                <div class="slider-container">
+                    <input type="range" min="1" max="100" class="slider" id="sensSlider">
+                </div>
+
+                <div class="knob" id="leftKnob">
+                    <div class="round" id="leftRound"></div>
+
+               </div>                <!-- <div class="knob0">
+                    <img src="https://w7.pngwing.com/pngs/107/759/png-transparent-circle-white-circle-white-monochrome-black-thumbnail.png">
+                </div> -->  
+
+            </div>
+    
         <div class="wrapper">
         
         <div id="container">
             
         </div>
     </div>
-    <div class="controls-vert">
-        <div class="colors">
-            <button></button>
+    <div class="right">
+        <div class="controls">
+            <button id="resetbtn" class="reset">Reset</button>
         </div>
-
+        <div class="rainbow">
+            <button class="rainbowbtn">Rainbow</button>
+        </div>
+        <div class="color">
+            <button class="rainbowbtn">Color</button>
+        </div>
+        <div class="knob" id="rightKnob">
+            <div class="round" id="rightRound"></div>
+        </div>
     </div>
-</div>
+
+    
+        
+        <!-- <div class="knob1">
+            <img src="https://w7.pngwing.com/pngs/107/759/png-transparent-circle-white-circle-white-monochrome-black-thumbnail.png">
+        </div> -->
+    </div>
     </body>
 </html>
+
