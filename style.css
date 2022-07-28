@@ -7,23 +7,29 @@ body {
 }
 .all{
     display: flex;
+    flex:0 0 1;
     align-items: center;
+    justify-content: left;
+    width: 1600px;
+    height: 1170px;
+    border: solid black;
+   
+    border-radius: 100px;
 }
-.controls-vert{
-    gap: 40px;
-    display: flex;
-    margin-left: 60px;
-    margin-right: 30px;
-    width:300px;
-    height:300px;
-    border:solid black;
 
-}
+
 .reset {
-    margin:25px 0px 30px 0px;
+    width:150px;
+    height:80px;
+    margin:100px 0px 30px 0px;
     font-size: 25px;
-    width:auto;
-    height:auto;
+    
+}
+.rainbowbtn{
+    width:150px;
+    height:80px;
+    margin:100px 0px 30px 0px;
+    font-size: 25px;
 }
 .wrapper {
     justify-content: center;
@@ -51,4 +57,65 @@ body {
 
 .live {
     background-color: black;
+}
+
+.knob0{
+    display:flex;
+    align-items: flex-end;
+}
+.left{
+    display:flex;
+    flex-direction: column;
+    height:1170px;
+    width:320px;
+        
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    width:320px;
+    height:1170px;
+    align-items: center;
+}
+
+.knob1{
+    display: flex;
+    align-items: flex-end;
+    margin-right: auto;
+}
+
+.slider-container{
+    margin:10px;
+    padding:15px;
+}
+
+.slider{
+    height:30px;
+    appearance: none;
+    background: grey;
+    width:100%;
+}
+.knob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    /*border:solid black;*/
+    width:320px;
+    height:320px;
+    border-radius: 0px 0px 0px 100px;
+    margin-top: auto;
+}
+#rightKnob{
+    border-radius: 0px 0px 100px 0px;
+}
+.round{
+    height:250px;
+    width:250px;
+    border:solid black;
+    border-radius: 100%;
+}
+#topSlider{
+    margin-top: 100px;
 }
