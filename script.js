@@ -4,7 +4,10 @@ function gridForm() {
     const container = document.getElementById('container')
     //container.style.height = 960;
     // To populate a 16x16 grid we need 256 elements. So iterate from 0 to 256.
-    const wh = prompt('Enter number of squares.', 'Number will be squared.');
+    // TODO
+    // Make slider change grid size.
+    let sizeSlider = document.getElementById('gridSize')
+    const wh = 50;
     total = wh * wh;
     // User sets number of squares squared.
     // If the user enters 64. It will create 64 x 64 grid. 4096 squares
@@ -25,21 +28,19 @@ function gridForm() {
 
     for (i = 0; i < total; i++){
         // Each time we create a div. divHeight * divWidth;
-       const div = document.createElement('div');
-       //let divSize = document.getElementById(i);
-      
+        const div = document.createElement('div');
+        // Add class 'grid' to each div we create
+        divList = div.classList;
+        divList.add('grid')
 
-       // Add class 'grid' to each div we create
-       divList = div.classList;
-       divList.add('grid')
-       div.style.height = divHeight + 'px';
-       div.style.width = divWidth + 'px';
+        div.style.height = divHeight + 'px';
+        div.style.width = divWidth + 'px';
        
-       // Add an id to each div of their position in the grid. i + 1 so first div is 1 and not 0, where our loop starts form.
-       div.id = (i + 1);
-       //console.log('id',div)
-       // Add the div to the dom.
-       container.appendChild(div);
+        // Add an id to each div of their position in the grid. i + 1 so first div is 1 and not 0, where our loop starts form.
+        div.id = (i + 1);
+        //console.log('id',div)
+        // Add the div to the dom.
+        container.appendChild(div);
        
     }
 }
@@ -57,7 +58,7 @@ function hover() {
             // Store the element from the id of the div the cursor is currently over.
             currentDiv = document.getElementById(ci);
             // Add the class .live to the current element(div).
-            currentDiv.classList.add('live');
+            currentDiv.style.backgroundColor = 'red' ;
         }
     })
     // Listen for the cursor leaving the highlighted div.
